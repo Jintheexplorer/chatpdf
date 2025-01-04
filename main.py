@@ -62,9 +62,8 @@ if uploaded_file:
         # Step 6: Store the embeddings in Chroma vector database
         vector_store = Chroma(
             collection_name="my_collection",
-            embedding_function=embed,
-            persist_directory="./chroma_store"  # Specify where to persist the vector store
-        )
+            embedding_function=embed,        
+            )
 
         # Add documents to the vector store
         vector_store.add_documents(split_docs)
