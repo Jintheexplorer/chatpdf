@@ -23,16 +23,16 @@ jsonpath-python==1.0.6
 jsonpointer==3.0.0
 langchain==0.3.14
 langchain-community==0.3.14
-langchain-openai
-langchain-text-splitters
-langchain-unstructured
-langchain-chroma
+langchain-openai==0.2.14
+langchain-text-splitters==0.3.4
+langchain-unstructured==0.1.5
+langchain-chroma==0.1.0
 langsmith==0.2.10
 marshmallow==3.23.3
 multidict==6.1.0
 mypy-extensions==1.0.0
 nest-asyncio==1.6.0
-numpy<2
+numpy>=1.21,<2  # Adjusted to satisfy `langchain-chroma` requirements
 openai==1.59.3
 orderly-set==5.2.3
 orjson==3.10.13
@@ -60,3 +60,4 @@ typing_extensions==4.12.2
 unstructured-client==0.25.9
 urllib3==2.3.0
 yarl==1.18.3
+streamlit  # Added Streamlit to resolve `command not found` error
